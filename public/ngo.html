@@ -1,0 +1,217 @@
+<html>
+
+<head>
+	<title> CharityAll - NGO </title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+	<!--NAVBAR START-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container-fluid"> <a class="navbar-brand" href="index.php">CharityAll</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"> <a class="nav-link" href="#volunteerCards">Volunteer</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="donate.php">Donate</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="ngo.php">NGO</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="login.php">Login</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="register.php">Register</a> </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--NAVBAR END-->
+	<table class="table table-striped" id="myTable" style="margin-top: 50px;">
+		<caption style="text-decoration-style:solid;text-align:center; font-weight:700;font-size:40px;">List of NGOs
+			<div class="text-center" style="padding:5px;">
+				<button type="button" class="btn btn-dark" style="margin: 20px;" id="all">All</button>
+				<!--*onclick="window.location.reload();"-->
+				<button type="button" class="btn btn-dark" style="margin: 20px;" id="child">Child</button>
+				<button type="button" class="btn btn-dark" style="margin: 20px;" id="Women">Women</button>
+				<button type="button" class="btn btn-dark" style="margin: 20px;" id="Elderly">Elderly</button>
+				<button type="button" class="btn btn-dark" style="margin: 20px;" id="Animal">Animal</button>
+				<button type="button" class="btn btn-dark" style="margin: 20px;" id="Health">Health</button>
+				<input onkeyup="myFunction()" type="text" placeholder="Search For NGOs" id="myInput" class="btn btn-light" style="border: 1px solid black"></input>
+				<!--<button type="button" class="btn btn-dark" style="margin: 20px;">Find Nearest NGO</button>-->
+			</div>
+		</caption>
+		<br>
+		<thead class="table-dark">
+			<tr>
+				<th scope="col">Name of NGO</th>
+				<th scope="col">Causes supported</th>
+				<th scope="col">Address</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Smiling Kids</td>
+				<td>Child</td>
+				<td>Bastora, Goa</td>
+			</tr>
+			<tr>
+				<td>Happy Paws</td>
+				<td>Animal</td>
+				<td>Panjim, Goa</td>
+			</tr>
+			<tr>
+				<td>Glasses</td>
+				<td>Elderly</td>
+				<td>Mapusa, Goa</td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+	function myFunction() {
+		var input, filter, table, tr, td, i, txtValue;
+		input = document.getElementById("myInput");
+		filter = input.value.toUpperCase();
+		table = document.getElementById("myTable");
+		tr = table.getElementsByTagName("tr");
+		for(i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[0];
+			if(td) {
+				txtValue = td.textContent || td.innerText;
+				if(txtValue.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				} else {
+					tr[i].style.display = "none";
+				}
+			}
+		}
+	}
+	document.getElementById('all').addEventListener('click', function() {
+		table = document.getElementById('myTable');
+		tr = table.querySelector('tbody').getElementsByTagName('tr');
+		for(var i = 0; i < tr.length; i++) {
+			console.log(tr[i]);
+			if(tr[i].getElementsByTagName('td')[1].innerText.indexOf('') > -1) {
+				tr[i].classList.remove('donotShow_row')
+			} else {
+				tr[i].classList.add('donotShow_row')
+			}
+		}
+	})
+	document.getElementById('child').addEventListener('click', function() {
+		table = document.getElementById('myTable');
+		tr = table.querySelector('tbody').getElementsByTagName('tr');
+		for(var i = 0; i < tr.length; i++) {
+			console.log(tr[i]);
+			if(tr[i].getElementsByTagName('td')[1].innerText.indexOf('Child') > -1) {
+				tr[i].classList.remove('donotShow_row')
+			} else {
+				tr[i].classList.add('donotShow_row')
+			}
+		}
+	})
+	document.getElementById('Women').addEventListener('click', function() {
+		table = document.getElementById('myTable');
+		tr = table.querySelector('tbody').getElementsByTagName('tr');
+		for(var i = 0; i < tr.length; i++) {
+			console.log(tr[i]);
+			if(tr[i].getElementsByTagName('td')[1].innerText.indexOf('Women') > -1) {
+				tr[i].classList.remove('donotShow_row')
+			} else {
+				tr[i].classList.add('donotShow_row')
+			}
+		}
+	})
+	document.getElementById('Elderly').addEventListener('click', function() {
+		table = document.getElementById('myTable');
+		tr = table.querySelector('tbody').getElementsByTagName('tr');
+		for(var i = 0; i < tr.length; i++) {
+			console.log(tr[i]);
+			if(tr[i].getElementsByTagName('td')[1].innerText.indexOf('Elderly') > -1) {
+				tr[i].classList.remove('donotShow_row')
+			} else {
+				tr[i].classList.add('donotShow_row')
+			}
+		}
+	})
+	document.getElementById('Animal').addEventListener('click', function() {
+		table = document.getElementById('myTable');
+		tr = table.querySelector('tbody').getElementsByTagName('tr');
+		for(var i = 0; i < tr.length; i++) {
+			console.log(tr[i]);
+			if(tr[i].getElementsByTagName('td')[1].innerText.indexOf('Animal') > -1) {
+				tr[i].classList.remove('donotShow_row')
+			} else {
+				tr[i].classList.add('donotShow_row')
+			}
+		}
+	})
+	document.getElementById('Health').addEventListener('click', function() {
+		table = document.getElementById('myTable');
+		tr = table.querySelector('tbody').getElementsByTagName('tr');
+		for(var i = 0; i < tr.length; i++) {
+			console.log(tr[i]);
+			if(tr[i].getElementsByTagName('td')[1].innerText.indexOf('Health') > -1) {
+				tr[i].classList.remove('donotShow_row')
+			} else {
+				tr[i].classList.add('donotShow_row')
+			}
+		}
+	})
+	</script>
+	<!-- Footer -->
+	<footer class="bg-dark text-center text-white">
+		<!-- Grid container -->
+		<div class="container p-4">
+			<!-- Section: Social media -->
+			<section class="mb-4">
+				<!-- Facebook -->
+				<a class="btn btn-outline-hidden btn-floating m-1" href="#!" role="button"><img class "sm_icon" src="icons/fb.png"></a>
+				<!-- Twitter -->
+				<a class="btn btn-outline-hidden btn-floating m-1" href="#!" role="button"><img class "sm_icon" src="icons/twitter.png"></a>
+				<!-- Instagram -->
+				<a class="btn btn-outline-hidden btn-floating m-1" href="#!" role="button"><img class "sm_icon" src="icons/insta.png"></a>
+			</section>
+			<!-- Section: Social media -->
+			<!-- Section: Form -->
+			<section class="">
+				<form action="">
+					<!--Grid row-->
+					<div class="row d-flex justify-content-center">
+						<!--Grid column-->
+						<div class="col-auto">
+							<p class="pt-2"> <strong>Sign up for our Newsletter!</strong> </p>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-3 col-12">
+							<!-- Email input -->
+							<div class="form-outline form-white mb-4">
+								<input type="email" id="form5Example21" class="form-control" placeholder="Email Address" /> </div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-auto">
+							<!-- Submit button -->
+							<button type="submit" class="btn btn-outline-light mb-4"> Subscribe </button>
+						</div>
+						<!--Grid column-->
+					</div>
+					<!--Grid row-->
+				</form>
+			</section>
+			<!-- Section: Form -->
+			<!-- Section: Text -->
+			<section class="mb-4">
+				<p> Insert footer content here </p>
+			</section>
+			<!-- Section: Text -->
+		</div>
+		<!-- Grid container -->
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);"> 21CP10 © 2022 Copyright: <a class="text-white" href="https://aitdgoa.edu.in/">AITD Goa</a> </div>
+		<!-- Copyright -->
+	</footer>
+	<!-- Footer -->
+</body>
+
+</html>

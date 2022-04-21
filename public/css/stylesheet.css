@@ -1,0 +1,99 @@
+   .about-us .image-part .about-quick-box .about-qcard p {
+      font-weight: 600;
+      font-size: 1.2rem; }
+    .about-us .image-part .about-quick-box .about-qcard i {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      color: #3cc88f; }
+    .about-us .image-part .about-quick-box .about-qcard .red {
+      color: #ff6b70; }
+    .about-us .image-part .about-quick-box .about-qcard .yell {
+      color: #f7a900; }
+    .about-us .image-part .about-quick-box .about-qcard .blu {
+      color: #21d7d9; }
+
+
+  caption { caption-side:top; }
+
+  .login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-form-2{
+    padding: 5%;
+    background: #333;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #333;
+}
+.login-form-2 .btnSubmit{
+    font-weight: 600;
+    color: #333;
+    background-color: #fff;
+}
+.login-form-2 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.reach input{
+  margin:10px;
+}
+
+.donotShow_row {
+            display: none;
+        }
+
+.card img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.card{
+  display: inline-block ;
+  margin: 10px;
+}
+
+.card-columns {
+    column-count: 4;
+}
+
+
+
+.currency-code{
+  color:white;
+  font-size:18px;
+}

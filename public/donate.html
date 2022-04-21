@@ -1,0 +1,221 @@
+<html>
+
+<head>
+	<title> CharityAll - Donate </title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+	<!--NAVBAR START-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container-fluid"> <a class="navbar-brand" href="index.php">CharityAll</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"> <a class="nav-link" href="#volunteerCards">Volunteer</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="donate.php">Donate</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="ngo.php">NGO</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="login.php">Login</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="register.php">Register</a> </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--NAVBAR END-->
+	<div class="container login-container" style="padding-top:50px">
+		<div class="row">
+			<div class="col-md-7 login-form-1" >
+				<h3>Donate Items</h3><br>
+        <div class="text-center">  
+          <a href="#requestedDonation" class="btnSubmit" style="text-decoration:none">See Requested Items</a><br>
+          <br>Don't see what you want to donate being requested?<br><br>
+          <a href="/offerItem.php" class="btnSubmit" style="text-decoration:none">Anything else to offer?</a>
+        </div>
+      </div>
+			<div class="col-md-4 login-form-2 text-center">
+				<h3>Donate Funds</h3>
+				<br>
+       
+				<div class="form-group text-center text-white" style="width:60%; margin:auto;">
+					 <h5>Select the Cause:</h5>
+          <div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" onclick="f1()">
+						<label class="form-check-label" for="flexCheckDefault1"> Child </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" onclick="f1()">
+						<label class="form-check-label" for="flexCheckDefault2"> Women </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" onclick="f1()">
+						<label class="form-check-label" for="flexCheckDefault3"> Elderly </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" onclick="f1()">
+						<label class="form-check-label" for="flexCheckDefault4"> Animal </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" onclick="f1()">
+						<label class="form-check-label" for="flexCheckDefault5"> Health </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked6">
+						<label class="form-check-label" for="flexCheckChecked6"> All </label>
+					</div>
+				</div>
+				<br>
+				<div class="form-group">
+          <label class="currency-code">&#8377</label>
+					<input class="text-currency" oninput="this.value=this.value.replace(/(?![0-9])./gmi,'')" type="integer" class="form-control" aria-describedby="emailHelp" placeholder="Enter Amount"><br>
+          <small id="emailHelp" class="form-text text-muted">*We'll share your amount to the ones that need it and send you the details*</small> 
+        </div>
+				<br>
+				<input type="submit " class="btnSubmit text-center" value="Pay" /> 
+      </div>
+
+      <script>
+      var u=document.getElementById('flexCheckChecked6');
+      function f1(){
+         u.checked = this.unchecked;
+      }
+     
+          document.getElementById('flexCheckChecked6').onclick = function() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            for (var checkbox of checkboxes) {
+                checkbox.checked = this.checked;
+              }
+            }
+      </script>
+		</div>
+	</div>
+
+  <div class="card-columns sm-6" id="requestedDonation">
+		<div class="card"> <img class="card-img-top" src="images/apple.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Card title that wraps to a new line</h5>
+				<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> <a href="">Donate</a> </div>
+		</div>
+		<div class="card p-3">
+			<blockquote class="blockquote mb-0 card-body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				<footer class="blockquote-footer"> <small class="text-muted">
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </small> </footer>
+			</blockquote> <a href="">Donate</a> </div>
+		<div class="card"> <img class="card-img-top" src="images/apple.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			</div> <a href="">Donate</a> </div>
+		<div class="card bg-primary text-white text-center p-3">
+			<blockquote class="blockquote mb-0">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+				<footer class="blockquote-footer"> <small>
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </small> </footer>
+			</blockquote> <a href="">Donate</a> </div>
+		<div class="card text-center">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			</div> <a href="">Donate</a> </div>
+		<div class="card"> <img class="card-img" src="images/caroselimage1.jpg" alt="Card image"> <a href="">Donate</a> </div>
+		<div class="card p-3 text-right">
+			<blockquote class="blockquote mb-0">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				<footer class="blockquote-footer"> <small class="text-muted">
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </small> </footer>
+			</blockquote> <a href="">Donate</a> </div>
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> <a href="">Donate</a> </div>
+		</div>
+		<div class="card text-center">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> <a href="">Donate</a> </div>
+		</div>
+		<div class="card"> <img class="card-img" src="images/caroselimage1.jpg" alt="Card image"> </div>
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			</div> <a href="">Donate</a> </div>
+	</div>
+
+  
+	<!-- Footer -->
+	<footer class="bg-dark text-center text-white">
+		<!-- Grid container -->
+		<div class="container p-4">
+			<!-- Section: Social media -->
+			<section class="mb-4">
+				<!-- Facebook -->
+				<a class="btn btn-outline-hidden btn-floating m-1" href="#!" role="button"><img class "sm_icon" src="icons/fb.png"></a>
+				<!-- Twitter -->
+				<a class="btn btn-outline-hidden btn-floating m-1" href="#!" role="button"><img class "sm_icon" src="icons/twitter.png"></a>
+				<!-- Instagram -->
+				<a class="btn btn-outline-hidden btn-floating m-1" href="#!" role="button"><img class "sm_icon" src="icons/insta.png"></a>
+			</section>
+			<!-- Section: Social media -->
+			<!-- Section: Form -->
+			<section class="">
+				<form action="">
+					<!--Grid row-->
+					<div class="row d-flex justify-content-center">
+						<!--Grid column-->
+						<div class="col-auto">
+							<p class="pt-2"> <strong>Sign up for our Newsletter!</strong> </p>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-3 col-12">
+							<!-- Email input -->
+							<div class="form-outline form-white mb-4">
+								<input type="email" id="form5Example21" class="form-control" placeholder="Email Address" /> </div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-auto">
+							<!-- Submit button -->
+							<button type="submit" class="btn btn-outline-light mb-4"> Subscribe </button>
+						</div>
+						<!--Grid column-->
+					</div>
+					<!--Grid row-->
+				</form>
+			</section>
+			<!-- Section: Form -->
+			<!-- Section: Text -->
+			<section class="mb-4">
+				<p> Insert footer content here </p>
+			</section>
+			<!-- Section: Text -->
+			<!-- Section: Links -->
+			<section class="">
+				<!--Grid row-->
+				<div class="row"></div>
+				<!--Grid row-->
+			</section>
+			<!-- Section: Links -->
+		</div>
+		<!-- Grid container -->
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);"> 21CP10 © 2022 Copyright: <a class="text-white" href="https://aitdgoa.edu.in/">  AITD Goa</a> </div>
+		<!-- Copyright -->
+	</footer>
+	<!-- Footer -->
+</body>
+
+</html>

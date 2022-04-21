@@ -1,0 +1,197 @@
+<html>
+
+<head>
+	<title> CharityAll - Register </title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+	<!--NAVBAR START-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container-fluid"> <a class="navbar-brand" href="index.php">CharityAll</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"> <a class="nav-link" href="index.php#volunteerCards">Volunteer</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="donate.php">Donate</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="ngo.php">NGO</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="login.php">Login</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="register.php">Register</a> </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--NAVBAR END-->
+	<div class="container login-container" style="padding-top:50px">
+		<div class="row">
+			<div class="col-md-7 login-form-1">
+				<section>
+					<h2 class="entry-title"><span>Sign Up</span> </h2>
+					<hr>
+					<form class="form-horizontal" method="post" name="signup" id="signup" enctype="multipart/form-data">
+						<div class="form-group">
+							<label class="control-label col-sm-3">Email ID <span class="text-danger">*</span></label>
+							<div class="col-md-8 col-sm-9">
+								<div class="input-group">
+									<input type="email" class="form-control" name="emailid" id="emailid" placeholder="Enter your Email ID" value=""> </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3">Set Password <span class="text-danger">*</span></label>
+							<div class="col-md-15 col-sm-8">
+								<div class="input-group"> 
+									<input type="password" class="form-control" name="password" id="password" placeholder="Choose password (5-15 chars)" value=""> </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-4">Confirm Password <span class="text-danger">*</span></label><br>
+							<div class="col-md-15 col-sm-8">
+								<div class="input-group">
+									<input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Confirm your password" value=""> </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3">First Name <span class="text-danger">*</span></label>
+							<div class="col-md-8 col-sm-9">
+								<input type="text" class="form-control" name="mem_name" id="mem_name" placeholder="Enter your First Name here" value=""> </div>
+						</div>
+            <div class="form-group">
+							<label class="control-label col-sm-3">Last Name <span class="text-danger">*</span></label>
+							<div class="col-md-8 col-sm-9">
+								<input type="text" class="form-control" name="mem_name" id="mem_name" placeholder="Enter your Last Name here" value=""> </div>
+						</div>
+            <div class="form-group">
+							<label class="control-label col-sm-4">Aadhaar Number<span class="text-danger">*</span></label>
+							<div class="col-md-8 col-sm-9">
+								<input type="text" class="form-control" name="aadhaar_no" id="aadhaar_no" placeholder="Enter your Aadhaar Number" value=""> 
+              </div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3">Date of Birth <span class="text-danger">*</span></label>
+							<div class="col-md-8 col-sm-9">  
+                <input type="date" name="date" class="form-control">
+              </div>
+            </div>
+						<div class="form-group">
+							<label class="control-label col-sm-3">Gender <span class="text-danger">*</span></label>
+							<div class="col-md-8 col-sm-9">
+								<label>
+									<input name="gender" type="radio" value="Male"> Male </label>
+								<label>
+									<input name="gender" type="radio" value="Female"> Female </label>
+                <label>
+									<input name="gender" type="radio" value="Other"> Other </label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3">Contact No. <span class="text-danger">*</span></label>
+							<div class="col-md-15 col-sm-8">
+								<div class="input-group"> <span class="input-group-addon"></span>
+									<input type="text" class="form-control" name="contactnum" id="contactnum" placeholder="Enter your Primary contact no." value=""> </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3">Profile Photo
+								<br> <small>(optional)</small></label>
+							<div class="col-md-15 col-sm-8">
+								<div class="input-group">
+									<input type="file" name="file_nm" id="file_nm" class="form-control upload" placeholder="" aria-describedby="file_upload"> </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3">Security Code </label>
+							<div class="col-md-15 col-sm-8">
+								<div>
+									<input type="text" name="captcha" id="captcha" class="form-control label-warning" /> </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-offset-3 col-md-8 col-sm-9"><span class="text-muted"><span class="label label-danger">Note:</span> By clicking Sign Up, you agree to our <a href="#">Terms and Conditions</a> and our <a href="#">Privacy Policy</a>.</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-offset-3 col-xs-10">
+								<input name="Submit" type="submit" value="Sign Up" class="btn btn-primary"> </div>
+						</div>
+					</form>
+				</section>
+			</div>
+			<div class="col-md-4 login-form-2 reach">
+				<h3>Would your Organisation like to Join Us?</h3>
+				<hr>
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Name of your Organisation" value="" /> </div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Email" value="" /> </div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Contact number" value="" /> </div>
+					<div class="form-group col-md-50">
+						<input type="submit" class="btnSubmit" value="Reach Us" /> </div>
+					<h3>We will reach back ASAP</h3> 
+        </form>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="bg-dark text-center text-white">
+		<!-- Grid container -->
+		<div class="container p-4">
+			<!-- Section: Social media -->
+			<section class="mb-4">
+				<!-- Facebook -->
+				<a class="btn btn-outline-hidden btn-floating m-1" href="#!" role="button"><img class "sm_icon" src="icons/fb.png"></a>
+				<!-- Twitter -->
+				<a class="btn btn-outline-hidden btn-floating m-1" href="#!" role="button"><img class "sm_icon" src="icons/twitter.png"></a>
+				<!-- Instagram -->
+				<a class="btn btn-outline-hidden btn-floating m-1" href="#!" role="button"><img class "sm_icon" src="icons/insta.png"></a>
+			</section>
+			<!-- Section: Social media -->
+			<!-- Section: Form -->
+			<section class="">
+				<form action="">
+					<!--Grid row-->
+					<div class="row d-flex justify-content-center">
+						<!--Grid column-->
+						<div class="col-auto">
+							<p class="pt-2"> <strong>Sign up for our Newsletter!</strong> </p>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-3 col-12">
+							<!-- Email input -->
+							<div class="form-outline form-white mb-4">
+								<input type="email" id="form5Example21" class="form-control" placeholder="Email Address" /> </div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-auto">
+							<!-- Submit button -->
+							<button type="submit" class="btn btn-outline-light mb-4"> Subscribe </button>
+						</div>
+						<!--Grid column-->
+					</div>
+					<!--Grid row-->
+				</form>
+			</section>
+			<!-- Section: Form -->
+			<section class="mb-4">
+				<p> Insert footer content here </p>
+			</section>
+		</div>
+		<!-- Grid container -->
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      21CP10 © 2022 Copyright:
+      <a class="text-white" href="https://aitdgoa.edu.in/">AITD Goa</a> 
+    </div>
+		<!-- Copyright -->
+	</footer>
+	<!-- Footer -->
+</body>
+
+</html>
